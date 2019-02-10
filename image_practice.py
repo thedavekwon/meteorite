@@ -4,9 +4,10 @@ from PIL import Image
 import numpy as np
 import scipy.stats as ss
 from numpy import linalg as la
+from periodictable import elements
 import time
+
 threshold = 1
-element_table = {}
 
 
 def add_minerals(known_comps):
@@ -55,16 +56,15 @@ def read_known_comps():
 
     return known_comps
 
-
 def read_pt():
-    pt = open("periodic_table.txt", mode='r')
-    for line in pt:
-        words = line.split(',')
-        element_table[words[1][1:]] = words[3]
-
+    element_table = {}
+    for el in elements:
+        element_table[el.symbol] = el.mass
+    return element_table
 
 # known compositions : dict of name of compound with a dictionary of elements with num of elements as the values
 def weight_calculation(known_compositions, list_of_elements):
+    element_table = read_pt()
     calculated_weights = {}
     for compound_key, compound_dict in known_compositions.items():
         cpd_weight = 0
@@ -130,35 +130,3 @@ def identification(percent_comps, list_of_elements):
         results_dict[comp_name] = comp_count / (matrix_size[0]*matrix_size[1])
 
     return results_dict
-
-def main():
-    read_pt()
-
-    list_of_elements = []
-    gs_matrix = []
-    f = open("pic_names.txt")
-    for line in f:
-        try:
-            im = Image.open(line[:-1])
-            words = line.split('_')
-            list_of_elements.append(words[2][:-5])  # This is kind of sloppy
-            gs_matrix.append(np.array(im))
-        except IOError:
-            print("oof")
-            pass
-
-    # This should  define absolute percentages
-    total_matrix = sum(gs_matrix[:])
-    big_boy = np.dstack(gs_matrix[0:10] / total_matrix)
-
-
-    start = time.time()
-    results = identification(big_boy, list_of_elements)
-
-    for name, percent in results.items():
-        print(name + ': ' + str(percent))
-
-    print("time is: " + str(time.time()-start))
-
-
-main()
