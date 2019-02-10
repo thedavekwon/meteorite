@@ -1,0 +1,10 @@
+sem-4128-t5-ps1a-m1_32bt_Al.tif
+sem-4128-t5-ps1a-m1_32bt_Ca.tif
+sem-4128-t5-ps1a-m1_32bt_Cr.tif
+sem-4128-t5-ps1a-m1_32bt_Fe.tif
+sem-4128-t5-ps1a-m1_32bt_Mg.tif
+sem-4128-t5-ps1a-m1_32bt_Ni.tif
+sem-4128-t5-ps1a-m1_32bt_P.tif
+sem-4128-t5-ps1a-m1_32bt_S.tif
+sem-4128-t5-ps1a-m1_32bt_Si.tif
+sem-4128-t5-ps1a-m1_32bt_Ti.tif

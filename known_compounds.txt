@@ -1,0 +1,11 @@
+Fe,Si,O_2
+Mg
+Al
+Ca
+Cr
+Mg
+Ni
+P
+S
+Si
+Ti
