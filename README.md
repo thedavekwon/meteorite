@@ -3,6 +3,7 @@
 ### Addressing { AMNH_Meteorite_Challenge, https://github.com/amnh/HackTheSolarSystem/wiki/Meteorite-Mineral-Mapping }
 
 ### Created by { Cooper Union }
+
 * thedavekwon - Dave Dohyung Kwon
 * flyingonionman - Minyoung Na
 * hqearth - Hannah Quirk
@@ -12,12 +13,11 @@
 ### Solution Description
 
 We vectorialized elements that are present in the compound to minimize hardwired calculations and instead obtain answers from
-probabilistic distributions.. This would not only allow for broader generalization of compounds that could be present, but 
-also allow larger images to be processed.
 
-### Installation Instructions
+probabilistic distributions.. This would not only allow for broader generalization of compounds that could be present, but 
 
 ##Strongly recommended that you use anaconda for handling Python packages.
+
 asn1crypto==0.24.0
 certifi==2018.11.29
 cffi==1.11.5
