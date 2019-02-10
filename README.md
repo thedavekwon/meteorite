@@ -12,7 +12,7 @@
 ### Solution Description
 
 We vectorialized elements that are present in the compound to minimize hardwired calculations and instead obtain answers from
-probablistic distribtutions. This would not only allow for broader generalization of compounds that could be present, but 
+probabilistic distributions.. This would not only allow for broader generalization of compounds that could be present, but 
 also allow larger images to be processed.
 
 ### Installation Instructions
