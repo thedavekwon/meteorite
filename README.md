@@ -7,7 +7,7 @@
 * flyingonionman - Minyoung Na
 * hqearth - Hannah Quirk
 * Minhtyyufa - Minh-Thai Nguyen
-* Sophie Jaro
+* sophiejaro - Sophie Jaro
 
 ### Solution Description
 
